@@ -1,10 +1,19 @@
 import 'package:facebook_clone_flutter/sections/headerButtonSection.dart';
+import 'package:facebook_clone_flutter/sections/roomSection.dart';
 import 'package:facebook_clone_flutter/sections/statusSection.dart';
 import 'package:flutter/material.dart';
 import 'package:facebook_clone_flutter/widgets/appBarButton.dart';
 
 class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+  Widget thinDivider =Divider(
+    thickness: 1,
+    color: Colors.grey[300],
+  );
+
+  Widget thickDivider =Divider(
+    thickness: 10,
+    color: Colors.grey[300],
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -37,15 +46,11 @@ class Home extends StatelessWidget {
         body: ListView(
           children: [
             StatusSection(),
-            Divider(
-              thickness: 1,
-              color: Colors.grey[300],
-            ),
+            thinDivider,
             HeaderButtonSection(),
-            Divider(
-              thickness: 10,
-              color: Colors.grey[300],
-            ),
+            thickDivider,
+            RoomSection(),
+            thickDivider,
           ],
         ),
       ),
