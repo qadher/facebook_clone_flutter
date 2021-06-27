@@ -1,8 +1,9 @@
 import 'package:facebook_clone_flutter/sections/headerButtonSection.dart';
 import 'package:facebook_clone_flutter/sections/roomSection.dart';
 import 'package:facebook_clone_flutter/sections/statusSection.dart';
+import 'package:facebook_clone_flutter/sections/storySection.dart';
 import 'package:flutter/material.dart';
-import 'package:facebook_clone_flutter/widgets/appBarButton.dart';
+import 'package:facebook_clone_flutter/widgets/circularButton.dart';
 
 class Home extends StatelessWidget {
   Widget thinDivider =Divider(
@@ -31,12 +32,12 @@ class Home extends StatelessWidget {
           ),
           ),
           actions: [
-            AppBarButton(buttonIcon: Icons.search,
+            CircularButton(buttonIcon: Icons.search,
                 buttonAction: (){
                    print("Search Screen");
             },
             ),
-            AppBarButton(buttonIcon: Icons.messenger,
+            CircularButton(buttonIcon: Icons.messenger,
               buttonAction: (){
                 print("messanger Screen");
               },
@@ -50,6 +51,8 @@ class Home extends StatelessWidget {
             HeaderButtonSection(),
             thickDivider,
             RoomSection(),
+            thickDivider,
+            StorySection(),
             thickDivider,
           ],
         ),
