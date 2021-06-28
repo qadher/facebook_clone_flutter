@@ -1,7 +1,9 @@
+import 'package:facebook_clone_flutter/assets.dart';
 import 'package:facebook_clone_flutter/sections/headerButtonSection.dart';
 import 'package:facebook_clone_flutter/sections/roomSection.dart';
 import 'package:facebook_clone_flutter/sections/statusSection.dart';
 import 'package:facebook_clone_flutter/sections/storySection.dart';
+import 'package:facebook_clone_flutter/widgets/postCard.dart';
 import 'package:flutter/material.dart';
 import 'package:facebook_clone_flutter/widgets/circularButton.dart';
 
@@ -54,6 +56,14 @@ class Home extends StatelessWidget {
             thickDivider,
             StorySection(),
             thickDivider,
+            PostCard(
+                avatar: kohli,
+                name: "Virat Kohli",
+              publishedTime: ("5h"),
+              postTitle: "Never Give Up",
+              postImage: kohlip,
+              showBlueTick: true,
+            ),
           ],
         ),
       ),
