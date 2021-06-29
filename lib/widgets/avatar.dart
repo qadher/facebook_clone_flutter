@@ -4,11 +4,15 @@ class Avatar extends StatelessWidget {
   final String displayImage;
   final bool displayStatus;
   final bool displayBorder;
+  final double width;
+  final double height;
 
   Avatar({
     required this.displayImage,
     required this.displayStatus,
     this.displayBorder = false,
+    this.width = 50,
+    this.height = 50,
 });
 
   @override
@@ -30,8 +34,8 @@ class Avatar extends StatelessWidget {
             borderRadius: BorderRadius.circular(100),
             child: Image.asset(
               displayImage,
-              width: 50,
-              height: 50,
+              width: width,
+              height: height,
             ),
           ),
         ),
