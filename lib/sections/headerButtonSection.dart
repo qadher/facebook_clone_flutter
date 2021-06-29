@@ -2,22 +2,17 @@ import 'package:flutter/material.dart';
 
 class HeaderButtonSection extends StatelessWidget {
 
-  Widget headerButton({
-  required String buttonText,
-    required IconData buttonIcon,
-    required void Function() buttonAction,
-    required Color buttonColor,
-}) {
-    // ignore: deprecated_member_use
-    return  FlatButton.icon(
-      onPressed: buttonAction,
-      icon: Icon(
-       buttonIcon,
-        color: buttonColor,
-      ),
-      label: Text(buttonText),
-    );
-  }
+  final Widget buttonOne;
+  final Widget buttonTwo;
+  final Widget buttonThree;
+
+  HeaderButtonSection({
+   required this.buttonOne,
+   required this.buttonTwo,
+   required this.buttonThree,
+});
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -34,34 +29,13 @@ class HeaderButtonSection extends StatelessWidget {
         children: [
           // ignore: deprecated_member_use
 
-          headerButton(
-              buttonText: "Live",
-              buttonIcon: Icons.video_call,
-              buttonAction: (){
-                print("Go  Live");
-              },
-              buttonColor: Colors.red,
-          ),
+          buttonOne,
           verticalDivider,
 
-          headerButton(
-            buttonText: "Photo",
-            buttonIcon: Icons.photo_library,
-            buttonAction: (){
-              print("Click Photo");
-            },
-            buttonColor: Colors.green,
-          ),
+         buttonTwo,
           verticalDivider,
 
-          headerButton(
-            buttonText: "Room",
-            buttonIcon: Icons.video_call,
-            buttonAction: (){
-              print("Chat Room");
-            },
-            buttonColor: Colors.purple,
-          ),
+          buttonThree,
         ],
       ),
     );

@@ -19,3 +19,7 @@ String messip = "assets/posts/messi_post.jpg";
 String prithip = "assets/posts/prithi_post.jpg";
 String sonp = "assets/posts/son_post.jpg";
 String tovinop = "assets/posts/tovino_post.jpg";
+String coldcasepost = "assets/posts/coldcase_post.jpg";
+
+//Post Title
+String coldCaseTitle = "The killer might be brilliant but he can’t run any longer, We are just a few hours away from solving the case. Watch #ColdCaseOnPrime June 30, Amazon Prime Video Aditi Balan Lakshmi Priyaa Chandramouli Suchitra Pillai Athmiya Gibin Gopinath Pooja Mohanraj Anto Joseph Anto Joseph Film Company Tanu Balak #PlanJStudios #JomonTjohn Shameer Muhammed";

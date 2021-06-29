@@ -1,5 +1,7 @@
+import 'package:facebook_clone_flutter/sections/headerButtonSection.dart';
 import 'package:facebook_clone_flutter/widgets/avatar.dart';
 import 'package:facebook_clone_flutter/widgets/blueTick.dart';
+import 'package:facebook_clone_flutter/widgets/headerButton.dart';
 import 'package:flutter/material.dart';
 
 class PostCard extends StatelessWidget {
@@ -34,6 +36,32 @@ class PostCard extends StatelessWidget {
           titleSection(),
           imageSection(),
           footerSection(),
+          Divider(color: Colors.grey[300],
+          thickness: 1,
+          ),
+          HeaderButtonSection(
+            buttonOne: headerButton(
+                buttonText: "Like",
+                buttonIcon: Icons.thumb_up_alt_outlined,
+                buttonAction: () {
+                  print("Like This Poster");
+                }, buttonColor: Colors.grey,
+            ),
+            buttonTwo: headerButton(
+                buttonText: "Comment",
+                buttonIcon: Icons.message_outlined,
+                buttonAction: () {
+                  print("Comment This Poster");
+                }, buttonColor: Colors.grey
+            ),
+            buttonThree: headerButton(
+                buttonText: "Share",
+                buttonIcon: Icons.share_outlined,
+                buttonAction: () {
+                  print("Share This Poster");
+                }, buttonColor: Colors.grey
+            ),
+          ),
         ],
       ),
     );
@@ -122,8 +150,12 @@ class PostCard extends StatelessWidget {
   }
 
   Widget titleSection() {
-    return Container(
-      padding: EdgeInsets.only(bottom: 5,),
+    return postTitle != null && postTitle != "" ? Container(
+      padding: EdgeInsets.only(
+        left: 10,
+        right: 10,
+        bottom: 5,
+      ),
       child:
       Text(
       postTitle == null ? "" : postTitle,
@@ -131,7 +163,8 @@ class PostCard extends StatelessWidget {
         color: Colors.black,
         fontSize: 16,
       ),),
-    );
+    )
+        : SizedBox();
   }
 
   Widget postCardHeader() {
